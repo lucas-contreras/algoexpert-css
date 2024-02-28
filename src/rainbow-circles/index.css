@@ -1,0 +1,62 @@
+body {
+  background-color: grey;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+div,
+div::after {
+  border-radius: 50%;
+}
+
+div::after {
+  content: "";
+  position: absolute;
+}
+
+#outer {
+  background-color: #ff0000;
+  height: 300px;
+  width: 300px;
+  z-index: 1;
+}
+
+#outer::after {
+  background-color: #ffa500;
+  height: 250px;
+  width: 250px;
+  z-index: 2;
+}
+
+#middle {
+  background-color: #ffff00;
+  height: 200px;
+  width: 200px;
+  z-index: 3;
+}
+
+#middle::after {
+  background-color: #008000;
+  height: 150px;
+  width: 150px;
+  z-index: 4;
+}
+
+#inner {
+  background-color: #0000ff;
+  height: 100px;
+  width: 100px;
+  z-index: 5;
+}
+
+#inner::after {
+  background-color: #800080;
+  height: 50px;
+  width: 50px;
+  z-index: 6;
+}
