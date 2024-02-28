@@ -1,40 +1,39 @@
 :root {
-    --font-size: 18px;
-  }
-  
-  body {
-    background-color: grey;
-    font-size: var(--font-size);
-  }
-  
-  nav {
-    display: flex;
-    background-color: #6e072d;
-    color: white;
-  }
-  
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-  }
-  
-  nav ul:first-child {
-    flex: 1;
-  }
-  
-  nav ul > li {
-    font-size: var(--font-size);
-    padding: var(--font-size) calc(var(--font-size) * 1.5);
-  }
-  
-  nav ul li:not(:last-of-type) {
-    border-right: 2px solid white;
-  }
-  
-  nav ul > li:hover {
-    background-color: #b90e4d;
-    cursor: pointer;
-  }
-  
+  --font-size: 18px;
+}
+
+body {
+  background-color: grey;
+  font-size: var(--font-size);
+}
+
+nav {
+  display: flex;
+  background-color: #6e072d;
+  color: white;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav ul:first-child {
+  flex: 1;
+}
+
+nav ul > li {
+  font-size: var(--font-size);
+  padding: var(--font-size) calc(var(--font-size) * 1.5);
+}
+
+nav ul li:not(:last-of-type) {
+  border-right: 2px solid white;
+}
+
+nav ul > li:hover {
+  background-color: #b90e4d;
+  cursor: pointer;
+}

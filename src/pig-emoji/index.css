@@ -1,0 +1,100 @@
+:root {
+  --margin-top-20: 20px;
+
+  --pig-color: #ffc0cb;
+  --pig-size: 200px;
+  --pig-ear-size: 50px;
+  --pig-eye-size: 50px;
+  --pig-circle: 50%;
+  --pig-ear-inwards: 10px;
+  --pig-nose-color: #f57187;
+  --pig-nose-width: 100px;
+  --pig-nose-height: 60px;
+}
+
+.head,
+.ear,
+.eye,
+.pupil,
+.nostril {
+  border-radius: var(--pig-circle);
+}
+
+.head,
+.ear {
+  background-color: var(--pig-color);
+  border: 5px solid black;
+}
+
+.eye,
+.nose {
+  border: 2px solid black;
+}
+
+.head {
+  width: var(--pig-size);
+  height: var(--pig-size);
+  margin-top: var(--margin-top-20);
+  position: relative;
+}
+
+.ear {
+  width: var(--pig-ear-size);
+  height: var(--pig-ear-size);
+  position: absolute;
+  z-index: -1;
+  top: -10px;
+}
+
+.ear:first-child {
+  left: var(--pig-ear-inwards);
+}
+
+.ear:last-child {
+  right: var(--pig-ear-inwards);
+}
+
+.eye {
+  width: var(--pig-eye-size);
+  height: var(--pig-eye-size);
+  background-color: white;
+  position: absolute;
+  top: calc(var(--margin-top-20) * 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye:first-child {
+  left: calc(var(--pig-ear-inwards) * 3);
+}
+
+.eye:last-child {
+  right: calc(var(--pig-ear-inwards) * 3);
+}
+
+.pupil {
+  width: calc(var(--pig-eye-size) / 2);
+  height: calc(var(--pig-eye-size) / 2);
+  background-color: black;
+}
+
+.nose {
+  width: var(--pig-nose-width);
+  height: var(--pig-nose-height);
+  background-color: var(--pig-nose-color);
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  border-radius: 35%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nostril {
+  width: calc(var(--pig-nose-width) * 0.25);
+  height: calc(var(--pig-nose-height) * 0.5);
+  background-color: black;
+}
